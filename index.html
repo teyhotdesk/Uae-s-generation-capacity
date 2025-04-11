@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UAE Generation Capacity Table</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Brix+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"/>
+
+  <style>
+    body {
+      background-color: #ffffff;
+      padding: 20px;
+      font-family: 'Brix Slab', serif;
+      max-width: 1000px;
+      margin: auto;
+      color: #969799;
+    }
+
+    h2 {
+      font-family: 'Brix Slab', serif;
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #969799;
+    }
+
+    .title-bold {
+      font-weight: 700;
+    }
+
+    .title-medium {
+      font-weight: 500;
+      margin-left: 5px;
+    }
+
+    .title-light {
+      font-weight: 300;
+      margin-left: 5px;
+    }
+
+    table.dataTable thead th {
+      background-color: #f5f7f6;
+      color: #545854;
+      font-family: 'Signika', sans-serif;
+    }
+
+    table.dataTable td {
+      font-family: 'Signika', sans-serif;
+      text-align: center;
+    }
+
+    table.dataTable tbody td:first-child {
+      text-align: left;
+      font-weight: 600;
+      background-color: #f5f7f6;
+    }
+
+    table.dataTable tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+
+    #generationTable_wrapper .dataTables_filter,
+    #generationTable_wrapper .dataTables_info,
+    #generationTable_wrapper .dataTables_paginate,
+    #generationTable_wrapper .dataTables_length {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>
+    <span class="title-bold">The UAE’s generation capacity,</span>
+    <span class="title-medium">2014–2023</span>
+    <span class="title-light">(MW)</span>
+  </h2>
+
+  <table id="generationTable" class="display">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>2014</th>
+        <th>2015</th>
+        <th>2016</th>
+        <th>2017</th>
+        <th>2018</th>
+        <th>2019</th>
+        <th>2020</th>
+        <th>2021</th>
+        <th>2022</th>
+        <th>2023</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Solar</td>
+        <td>130</td>
+        <td>132</td>
+        <td>135</td>
+        <td>353</td>
+        <td>600</td>
+        <td>1,935</td>
+        <td>2,333</td>
+        <td>3,002</td>
+        <td>3,588</td>
+        <td>5,925</td>
+      </tr>
+      <tr>
+        <td>Wind</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>104</td>
+      </tr>
+      <tr>
+        <td>Bioenergy</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>9</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>Nuclear</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>182</td>
+        <td>1,198</td>
+        <td>2,294</td>
+        <td>3,686</td>
+      </tr>
+      <tr>
+        <td>Total renewables</td>
+        <td>133</td>
+        <td>135</td>
+        <td>136</td>
+        <td>354</td>
+        <td>601</td>
+        <td>1,936</td>
+        <td>2,334</td>
+        <td>3,003</td>
+        <td>3,597</td>
+        <td>6,053</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- jQuery + DataTables JS -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#generationTable').DataTable({
+        paging: false,
+        searching: false,
+        ordering: false,
+        info: false
+      });
+    });
+  </script>
+
+</body>
+</html>
